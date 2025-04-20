@@ -11,7 +11,7 @@
     <link href="dist/output.css" rel="stylesheet">
 </head>
 <body class="">
-    <header class="bg-[#014E56] pt-[73px]">
+    <header class="bg-[#014E56] pt-12 md:pt-16 lg:pt-[73px]">
         <nav class="container mx-auto flex items-center justify-between text-white font-livvic">
             <div class="flex items-center gap-20 md:gap-12">
                 <a href="#"><img src="src/images/myteam.svg" alt=""></a>
@@ -39,10 +39,10 @@
             <a href="#" class="font-semibold text-lg px-8 py-2 rounded-3xl border-white border-2 hover:bg-white hover:text-[#014E56] transition-colors duration-300 hidden md:block">contact us</a>
             <i class="fa-solid fa-bars block md:hidden text-2xl" id="burger-menu"></i>
             <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
-            <div id="mobile-menu" class="fixed top-0 right-0 w-3/5 h-full bg-[#2C6269] transform translate-x-full transition-all duration-300 z-50 flex flex-col pt-28 px-12">
+            <div id="mobile-menu" class="fixed top-0 right-0 w-3/5 h-full bg-[#2C6269] transform translate-x-full transition-all duration-300 z-50 flex flex-col pt-28">
                 <i class="fa-solid fa-xmark absolute top-14 right-[25px] text-3xl cursor-pointer" id="close-btn"></i>
                 <div class="flex flex-col gap-9">
-                    <ul class="flex flex-col gap-6">
+                    <ul class="flex flex-col gap-6 px-12">
                         <li class="font-semibold text-lg text-white">
                             <a href="#"
                                 class="relative inline-block py-1
@@ -73,6 +73,23 @@
             </div>
         </nav>
     </header>
+    <main class="font-livvic">
+        <div class="bg-[#014E56] pt-20 pb-[198px] md:pt-28 md:pb-[256px] lg:pt-[130px] lg:pb-[250px] relative">
+            <div class="container flex flex-col gap-[18px] md:gap-6 lg:gap-8 lg:flex-row lg:text-start text-center text-white">
+                <div class="lg:w-[120%]">
+                    <h1 class="font-bold text-[40px] md:text-[64px] lg:text-[100px] leading-10 md:leading-[56px] lg:leading-[100px]">
+                        Find the <span class="block">best <span class="text-[#F67E7E]">talent</span></span>
+                    </h1>
+                </div>
+                <div class="p-0 md:px-[110px] lg:p-0 flex flex-col justify-between">
+                    <div class="w-[50px] h-1 bg-[#79C8C7] hidden lg:block"></div>
+                    <p class="font-semibold text-[15px] lg:text-lg leading-7">Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.</p>
+                </div>
+                <img src="src/images/mainLeftIcon.svg" alt="" class="absolute hidden lg:block left-0">
+            </div>
+            <img src="src/images/mainIcon.svg" alt="" class="absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-3/4 lg:-translate-x-3/4">
+        </div>
+    </main>
     <script src="src/script.js"></script>
 </body>
 </html>
