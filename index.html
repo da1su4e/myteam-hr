@@ -4,10 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>MyTeam HR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="">
-
+    <header class="bg-[#014E56] pt-[73px]">
+        <nav class="container px-[1rem] mx-auto flex items-center justify-between text-white font-livvic">
+            <div class="flex items-center gap-20 md:gap-12">
+                <a href="#"><img src="src/images/myteam.svg" alt=""></a>
+                <ul class="gap-10 hidden md:flex">
+                    <li class="font-semibold text-lg">
+                        <a href="#"
+                            class="relative inline-block py-1
+                                after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2
+                                after:h-[2px] after:w-0 after:bg-white
+                                hover:after:w-full after:transition-all after:duration-300">
+                            home
+                        </a>
+                    </li>
+                    <li class="font-semibold text-lg">
+                        <a href="#"
+                            class="relative inline-block py-1
+                                after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2
+                                after:h-[2px] after:w-0 after:bg-white
+                                hover:after:w-full after:transition-all after:duration-300">
+                            about
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="font-semibold text-lg px-8 py-2 rounded-3xl border-white border-2 hover:bg-white hover:text-[#014E56] transition-colors duration-300 hidden md:block">contact us</a>
+            <i class="fa-solid fa-bars block md:hidden text-2xl" id="burger-menu"></i>
+            <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+            <div id="mobile-menu" class="fixed top-0 right-0 w-3/5 h-full bg-[#2C6269] transform translate-x-full transition-all duration-300 z-50 flex flex-col pt-28 px-12">
+                <i class="fa-solid fa-xmark absolute top-14 right-[25px] text-3xl cursor-pointer" id="close-btn"></i>
+                <div class="flex flex-col gap-9">
+                    <ul class="flex flex-col gap-6">
+                        <li class="font-semibold text-lg text-white">
+                            <a href="#"
+                                class="relative inline-block py-1
+                                after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2
+                                after:h-[2px] after:w-0 after:bg-white
+                                hover:after:w-full after:transition-all after:duration-300">
+                                home
+                            </a>
+                        </li>
+                        <li class="font-semibold text-lg text-white">
+                            <a href="#"
+                                class="relative inline-block py-1
+                                after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2
+                                after:h-[2px] after:w-0 after:bg-white
+                                hover:after:w-full after:transition-all after:duration-300">
+                                about
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="w-fit self-center">
+                        <a href="#"
+                            class="inline-block text-lg font-semibold px-8 py-2 rounded-3xl border-white border-2 hover:bg-white hover:text-[#014E56] transition-colors duration-300">
+                            contact us
+                        </a>
+                    </div>
+                </div>
+                <img src="src/images/burgerIcon.svg" alt="" class="absolute right-0 bottom-0">
+            </div>
+        </nav>
+    </header>
     <script src="src/script.js"></script>
 </body>
 </html>
