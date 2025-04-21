@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ["./index.html"],
   theme: {
@@ -17,5 +18,26 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addComponents, theme }) {
+      addComponents({
+        '.container-alt': {
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          paddingLeft: theme('spacing.4'),
+          paddingRight: theme('spacing.4'),
+          [`@media (min-width: ${theme('screens.sm')})`]: {
+            maxWidth: '375px',
+          },
+          [`@media (min-width: ${theme('screens.md')})`]: {
+            maxWidth: '573px',
+          },
+          [`@media (min-width: ${theme('screens.lg')})`]: {
+            maxWidth: '1400px',
+          },
+        },
+      });
+    }),
+  ],
 }
